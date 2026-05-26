@@ -1,0 +1,53 @@
+# Generador de Códigos QR (Full‑Stack)
+
+Proyecto compuesto por una API en Express que genera imágenes QR y un frontend en React + TypeScript + Tailwind CSS que consume dicha API.
+
+## Estructura del proyecto
+
+- `back-qr-generador/` → API REST
+- `qr-generador/` → Aplicación React (Vite)
+
+## Backend (API)
+
+- **Framework**: Express 5
+- **Puerto por defecto**: 3000 (configurable con `PORT` en `.env`)
+- **Endpoints**:
+  - `GET /` → Mensaje de confirmación
+  - `POST /api/qr/generate` → Recibe `{ "text": "url" }` y devuelve un Data URI de la imagen PNG del QR
+
+### Controlador
+- `qr.controller.js` → Usa la librería `qrcode` para generar `QRCode.toDataURL(text)`. Maneja errores con status 500.
+
+## Frontend (SPA)
+
+- **Tecnologías**: React 19, TypeScript, Vite, Tailwind CSS 4, SweetAlert2
+- **Componentes principales**:
+  - `App.tsx` → Layout general, campo de entrada de URL, pie de página.
+  - `GeneradorQR.tsx` → Lógica de petición a la API, estados de carga/error/vacío, muestra la imagen QR en una tarjeta.
+  - `Boton.tsx` → Botón reutilizable con estilos Tailwind (modo oscuro, focus ring, etc.).
+
+### Flujo de uso
+1. El usuario ingresa una URL en el campo de texto.
+2. Al presionar "Generar QR" se valida que no esté vacío (si lo está, SweetAlert2 muestra error).
+3. Se hace `fetch POST` a `http://localhost:3000/api/qr/generate` con `{ text }`.
+4. Durante la petición se muestra un spinner.
+5. Si la respuesta es exitosa, se actualiza el estado `qrSrc` con el Data URI y se muestra la imagen.
+6. En caso de error, SweetAlert2 muestra un mensaje.
+
+### Estilos
+- Tailwind CSS con soporte para modo oscuro (clase `dark:`).
+- Diseño responsivo con `max-w-2xl`, padding adaptable (`px-4 sm:px-6 lg:px-8`).
+- Placeholder visual (cuadrado con borde punteado) cuando no hay QR.
+
+## Instalación y ejecución
+
+```bash
+# Backend
+cd back-qr-generador
+npm install
+npm run dev   # node --watch index.js (puerto 3000)
+
+# Frontend
+cd qr-generador
+npm install
+npm run dev   # vite (puerto 5173)
