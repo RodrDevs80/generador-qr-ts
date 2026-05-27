@@ -1,5 +1,7 @@
 # 📱 Generador de Códigos QR
 
+[APP funcionando](https://qr-generador-gilt.vercel.app/ "ir a la APP")
+
 Aplicación full‑stack que permite generar códigos QR a partir de cualquier URL de forma rápida y con una interfaz moderna.
 
 ## ✨ Características
@@ -15,24 +17,24 @@ Aplicación full‑stack que permite generar códigos QR a partir de cualquier U
 
 ### Frontend
 
-| Tecnología | Uso |
-|------------|-----|
-| [React 19](https://react.dev) | Librería de interfaces |
-| [TypeScript](https://www.typescriptlang.org) | Tipado estático |
-| [Vite](https://vitejs.dev) | Empaquetador y servidor de desarrollo |
-| [Tailwind CSS 4](https://tailwindcss.com) | Estilos utilitarios |
-| [SweetAlert2](https://sweetalert2.github.io) | Ventanas emergentes atractivas |
+| Tecnología                                   | Uso                                   |
+| -------------------------------------------- | ------------------------------------- |
+| [React 19](https://react.dev)                | Librería de interfaces                |
+| [TypeScript](https://www.typescriptlang.org) | Tipado estático                       |
+| [Vite](https://vitejs.dev)                   | Empaquetador y servidor de desarrollo |
+| [Tailwind CSS 4](https://tailwindcss.com)    | Estilos utilitarios                   |
+| [SweetAlert2](https://sweetalert2.github.io) | Ventanas emergentes atractivas        |
 
 ### Backend
 
-| Tecnología | Uso |
-|------------|-----|
-| [Node.js](https://nodejs.org) | Entorno de ejecución |
-| [Express 5](https://expressjs.com) | Servidor HTTP |
-| [qrcode](https://www.npmjs.com/package/qrcode) | Generación de códigos QR |
-| [Morgan](https://www.npmjs.com/package/morgan) | Logger de peticiones |
-| [CORS](https://www.npmjs.com/package/cors) | Habilitar peticiones cruzadas |
-| [dotenv](https://www.npmjs.com/package/dotenv) | Variables de entorno |
+| Tecnología                                     | Uso                           |
+| ---------------------------------------------- | ----------------------------- |
+| [Node.js](https://nodejs.org)                  | Entorno de ejecución          |
+| [Express 5](https://expressjs.com)             | Servidor HTTP                 |
+| [qrcode](https://www.npmjs.com/package/qrcode) | Generación de códigos QR      |
+| [Morgan](https://www.npmjs.com/package/morgan) | Logger de peticiones          |
+| [CORS](https://www.npmjs.com/package/cors)     | Habilitar peticiones cruzadas |
+| [dotenv](https://www.npmjs.com/package/dotenv) | Variables de entorno          |
 
 ## 📋 Requisitos previos
 
@@ -125,27 +127,27 @@ generador-qr-ts/
 
 ### Backend (`back-qr-generador`)
 
-| Comando | Descripción |
-|---------|-------------|
+| Comando       | Descripción                                                 |
+| ------------- | ----------------------------------------------------------- |
 | `npm run dev` | Inicia el servidor con Node `--watch` (reinicio automático) |
-| `npm start` | Inicia el servidor en modo normal |
+| `npm start`   | Inicia el servidor en modo normal                           |
 
 ### Frontend (`qr-generador`)
 
-| Comando | Descripción |
-|---------|-------------|
-| `npm run dev` | Inicia el servidor de desarrollo con Vite |
-| `npm run build` | Compila TypeScript y empaqueta para producción |
-| `npm run preview` | Previsualiza la versión de producción |
-| `npm run lint` | Ejecuta ESLint en el código |
+| Comando           | Descripción                                    |
+| ----------------- | ---------------------------------------------- |
+| `npm run dev`     | Inicia el servidor de desarrollo con Vite      |
+| `npm run build`   | Compila TypeScript y empaqueta para producción |
+| `npm run preview` | Previsualiza la versión de producción          |
+| `npm run lint`    | Ejecuta ESLint en el código                    |
 
 ## 🌐 Variables de entorno
 
 Solo el backend puede usar variables de entorno (archivo `.env` en `back-qr-generador`):
 
-| Variable | Descripción | Valor por defecto |
-|----------|-------------|-------------------|
-| `PORT`   | Puerto donde escucha el servidor Express | `3000` |
+| Variable | Descripción                              | Valor por defecto |
+| -------- | ---------------------------------------- | ----------------- |
+| `PORT`   | Puerto donde escucha el servidor Express | `3000`            |
 
 ## 🤝 Contribuciones
 
@@ -166,6 +168,4 @@ Desarrollado con ❤️ por **Carlos Eduardo Rodriguez**
 
 ## 📄 Licencia
 
-Este proyecto está bajo la licencia ISC. 
-
-
+Este proyecto está bajo la licencia ISC.
